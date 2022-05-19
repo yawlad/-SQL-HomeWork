@@ -1,0 +1,7 @@
+mysql> CREATE DATABASE example;
+mysql> CREATE DATABASE sample;
+mysql> exit;
+C:\Program Files\MySQL\MySQL Server 8.0\bin>mysqldump -u root -p example > D:/dump.sql
+Enter password: ****
+C:\Program Files\MySQL\MySQL Server 8.0\bin>mysql -u root -p sample < D:/dump.sql
+Enter password: ****
