@@ -6,7 +6,7 @@ CREATE TABLE logs(
 	created_at datetime DEFAULT now(),
 	table_name varchar(50),
 	added_data varchar(255)
-);
+) ENGINE = ARCHIVE;
 
 Delimiter //
 DROP PROCEDURE IF EXISTS create_log//
@@ -51,4 +51,4 @@ END//
 Delimiter ;
 
 INSERT users (name) VALUES ('Drake');
-INSERT catalogs (name) VALUES ('DVDs');
+
