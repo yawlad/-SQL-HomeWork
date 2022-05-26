@@ -1,0 +1,19 @@
+Delimiter //
+DROP FUNCTION IF EXISTS FIBONACCI//
+
+CREATE FUNCTION FIBONACCI(num INT)
+RETURNS INT DETERMINISTIC
+BEGIN 
+	DECLARE i INT;
+	DECLARE res INT;
+	SET i = 0;
+	SET res = 0;
+	c1: WHILE i <= num DO
+			SET res = res + i;
+			SET i = i + 1;
+		END WHILE c1;
+	RETURN res;
+END//
+Delimiter ;
+
+SELECT FIBONACCI(10);
